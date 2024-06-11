@@ -435,7 +435,12 @@ python summarize_gpt_review.py
 ### Evaluation after every training epoch.
 
 ```Shell
-bash ./llava/train/train_with_eval.sh
+#full
+bash ./llava/train/train_with_eval_full.sh
+#lora
+bash ./llava/train/train_with_eval_lora.sh
+#qlora
+bash ./llava/train/train_with_eval_qlora.sh
 ```
 
 You can edit llava/train/train_with_eval.sh to modify training/evaluation argments.

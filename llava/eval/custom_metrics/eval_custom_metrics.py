@@ -41,10 +41,6 @@ def get_checkpoint_path(checkpoint_folder, evaluate_best_epoch):
 
 
 def main(args):
-    quantization_config = BitsAndBytesConfig(
-        load_in_4bit=True, bnb_4bit_compute_dtype=torch.float16
-    )
-
     processor = AutoProcessor.from_pretrained(args.model_id)
     checkpoint = get_checkpoint_path(args.checkpoint_folder, args.evaluate_best_epoch)
     print(f"Load checkpoint: {checkpoint}")
